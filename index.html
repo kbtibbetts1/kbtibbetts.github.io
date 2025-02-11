@@ -3,10 +3,23 @@
 
 <head>
     <title>kbtibbetts page</title>
+    <script>
+        function addChar() {
+            newCharNum = Math.floor(Math.random() * 27);
+            newChar = "";
+            if (newCharNum == 0) {
+                newChar = " ";
+            } else {
+                newChar = String.fromCharCode(newCharNum + 96);
+            }
+
+            document.getElementById("mainP").innerHTML += newChar;
+        }
+    </script>
 </head>
 
 <body>
-    <p>hello world!</p>
+    <p id="mainP" onkeydown="addChar">hello world! </p>
 </body>
 
 </html>
