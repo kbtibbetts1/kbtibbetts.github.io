@@ -1,26 +1,13 @@
 <!DOCTYPE html>
+
 <html>
 
-<head>
-    <title>monkeytyper.institute</title>
-    <script>
-        function addChar() {
-            
-            newChar = Math.floor(Math.random() * (32) + 97);
+	<head>
+		<title>monkeytyper.institute</title>
+	</head>
 
-            if (newChar >= 26 + 97) {
-                newChar = 32
-            }
-
-            innerHtml = document.getElementById("mainP").innerHTML.concat(String.fromCharCode(newChar));
-            
-            document.getElementById("mainP").innerHTML = innerHtml;
-        }
-    </script>
-</head>
-
-<body onkeydown="addChar()">
-    <p id="mainP">random chars, spaces on avg 5: </p>
-</body>
+	<body>
+		<p>hello chat!</p>
+	</body>
 
 </html>
