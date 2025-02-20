@@ -1,52 +1,27 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
+
 <html>
-<head>
-    <title>monkeytyper.institute</title>
-    <script>
-        function addChar() {
-            
-            newChar = Math.floor(Math.random() * (32) + 97);
+	<head>
+		<title>monkeytyper.institute</title>
+		<script>
+			function addChar() {
+				
+				newChar = Math.floor(Math.random() * (32) + 97);
+	
+				if (newChar >= 26 + 97) {
+					newChar = 32
+				}
+	
+				innerHtml = document.getElementById("mainP").innerHTML.concat(String.fromCharCode(newChar));
+				
+				document.getElementById("mainP").innerHTML = innerHtml;
+			}
+		</script>
+	</head>
 
-            if (newChar >= 26 + 97) {
-                newChar = 32
-            }
-
-            innerHtml = document.getElementById("mainP").innerHTML.concat(String.fromCharCode(newChar));
-            
-            document.getElementById("mainP").innerHTML = innerHtml;
-        }
-    </script>
-</head>
-
-<body onkeydown="addChar()">
-    <p id="mainP">random chars, spaces on avg 5: </p>
-</body>
-
-=======
-<!DOCTYPE html>
-<html>
-<head>
-    <title>monkeytyper.institute</title>
-    <script>
-        function addChar() {
-            
-            newChar = Math.floor(Math.random() * (32) + 97);
-
-            if (newChar >= 26 + 97) {
-                newChar = 32
-            }
-
-            innerHtml = document.getElementById("mainP").innerHTML.concat(String.fromCharCode(newChar));
-            
-            document.getElementById("mainP").innerHTML = innerHtml;
-        }
-    </script>
-</head>
-
-<body onkeydown="addChar()">
-    <p id="mainP">random chars, spaces on avg 5: </p>
-</body>
-
->>>>>>> b2ced59eb07791ca048c546c86a85a504e7d9fdd
+	<body onkeydown="addChar()">
+		<p id="mainP">random chars, spaces on avg 5: </p>
+	</body>
+	
 </html>
